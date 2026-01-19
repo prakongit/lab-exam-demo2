@@ -1,0 +1,109 @@
+(1)mkdir your-project-directory
+cd your-project-directory
+git init
+touch my_file.txt
+git add my_file.txt
+git add .
+git commit -m "Your commit message here"
+
+
+(2)git checkout master
+git checkout -b feature-branch
+git add .
+git commit -m "Your commit message for feature-branch"
+git checkout master
+git merge feature-branch
+
+
+(3)mkdir stash_demo
+cd stash_demo
+git init
+touch mystash.txt
+echo "print('Hello world')" >> mystash.txt
+git add mystash.txt
+git commit -m "initial commit : added main.py"
+echo "print('This is a stash demo')" >> mystash.txt
+git status
+git stash save "your stash message"
+git stash list
+git checkout -b target-branch
+git stash apply
+git add .
+git stash -m "Add input entry validation features"
+git stash list
+git stash show stash@{0}
+git stash show stash@{1}
+git stash add .
+git stash pop
+git stash list
+git stash push -m "say_my_name"
+git stash list
+
+
+(4)cd "folder path copy madhbek"
+git clone "github code copy"
+
+
+(5)cd "folder path"
+git clone "repository link"
+cd repo_name
+git fetch
+git rebase origin/main
+git rebase -i origin/main
+git rebase --abort
+git push origin main --force
+git rebase --continue
+git rebase --abort
+git status
+rm -rf .git/rebase-merge
+git status
+git push origin main --force
+
+
+(6)cd "folder root path"
+git checkout main
+git checkout -b feature-branch
+echo "feature work" >> feature.txt
+git add .
+git commit -m "added feature work"
+git checkout main
+git merge feature-branch -m "custom merge message for branch"
+git merge --continue
+git push origin main
+
+
+(7)cd "C:\Users\yashu\OneDrive\Desktop\Program7"
+git clone "https://github.com/krishan-lible-q-bl/Third_sem_program7.git"
+cd "C:\Users\yashu\OneDrive\Desktop\Program7\Third_sem_program7"
+git log
+git tag v1.0
+git push origin v1.0
+git log v2.0 45666c129276c3214d2813c685
+git push origin v2.0
+git tag
+git show v1.0
+git tag v2.0
+
+(8)git cherry-pick a576ca223c12146d123
+git cherry-pick aa1649ac84162cd1324
+git add .
+
+
+(9)git log -1 --pretty=format:"%H%n%an%n%ad%n%s" aae27143bc1c9518a24
+
+
+(10)cd "folder url"
+git clone "github url"
+cd "folder title url"
+git log --oneline
+git log --pretty=format:"%h %an %ad %s"
+git log --oneline --date=short
+git log --author="John Doe" --since="2023-01-01" --until="2023-12-31"
+
+
+(11)git log -n 5
+git log -n 1 --oneline
+
+
+(12)git revert commit number
+git reset --hard commit number
